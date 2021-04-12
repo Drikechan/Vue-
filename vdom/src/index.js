@@ -17,4 +17,12 @@ let myNode = h('ul', {}, [
 ]);
 let container = document.getElementById('container');
 patch(container, myNode);
+
+let myNode1 = h('div', {}, 'chan');
+let btn = document.createElement('button');
+btn.innerHTML = '改变DOM';
+document.body.appendChild(btn);
+btn.addEventListener('click', function() {
+    patch(myNode, myNode1);
+})
   
